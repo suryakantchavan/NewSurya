@@ -5,11 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
             }
         }
         stage('Test') {
             steps {
-               mvn test
+            bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
         stage('Deploy') {
