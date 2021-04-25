@@ -7,8 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		 features = "Feature",dryRun=false
-		 ,glue={"SetpDefinations"}
+		 features = "Feature",dryRun=true
+		 ,glue={"SetpDefinations"},tags="123"
 		 )
 public class TestRuner {
 
